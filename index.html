@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Depois do Fim — E-book gratuito | Phillipe</title>
+<meta name="description" content="O método de 4 fases pra atravessar o término com Deus, curar o coração e voltar a se escolher. E-book gratuito do Phillipe (@ophillipee).">
+<meta property="og:title" content="Depois do Fim — E-book gratuito">
+<meta property="og:description" content="O método de 4 fases pra atravessar o término com Deus, curar o coração e voltar a se escolher.">
+<meta property="og:image" content="capa.png">
+<meta name="theme-color" content="#3B2A20">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script>
+  // ====== CONFIGURAÇÃO ======
+  // URL do Google Apps Script (veja LEIAME.md). Vazio = só libera o download.
+  const FORM_ENDPOINT = "";
+  // ID do Pixel da Meta. Vazio = sem pixel.
+  const META_PIXEL_ID = "";
+  const PDF_URL = "Depois-do-Fim-Phillipe.pdf";
+  // ===========================
+  if (META_PIXEL_ID) {
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', META_PIXEL_ID); fbq('track', 'PageView');
+  }
+</script>
+<style>
+  :root{
+    --branco:#FCFBF9; --cafe:#3B2A20; --cafe-2:#4A362A; --texto:#2A1E17;
+    --caramelo:#8A5A3C; --caramelo-claro:#E2B893; --areia:#F3EEE9; --linha:#E6DFD8;
+    --noise:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 .9  0 0 0 0 .8  0 0 0 .07 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+    --serif:"Cormorant Garamond",Georgia,serif; --sans:Inter,system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--branco);color:var(--texto);font-family:var(--serif);font-variant-numeric:lining-nums;font-size:20px;line-height:1.5;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
+  em{font-style:italic;color:var(--caramelo)}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+  .sans{font-family:var(--sans);text-transform:uppercase;letter-spacing:.2em;font-weight:600;font-size:11px}
+  .traco{width:48px;height:2px;background:var(--caramelo);margin-bottom:18px}
+  h1,h2,h3{font-weight:600;line-height:1.05;letter-spacing:-.01em}
+  h2{font-size:clamp(34px,6vw,52px);margin-bottom:22px}
+  section{padding:80px 0}
+
+  .escuro{background:var(--cafe) var(--noise);color:var(--branco)}
+  .escuro em{color:var(--caramelo-claro)}
+  .escuro .traco{background:var(--caramelo-claro)}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--caramelo);color:var(--branco);text-decoration:none;font-family:var(--sans);font-weight:600;font-size:13px;letter-spacing:.16em;text-transform:uppercase;padding:20px 30px;border:0;border-radius:2px;cursor:pointer;transition:background .2s,transform .2s}
+  .btn:hover{background:#74492F;transform:translateY(-1px)}
+  .escuro .btn{background:var(--caramelo-claro);color:var(--cafe)}
+  .escuro .btn:hover{background:#ECC9A8}
+
+  /* topo */
+  header{position:absolute;top:0;left:0;right:0;padding:24px 0;z-index:2}
+  header .wrap{display:flex;justify-content:space-between;align-items:center;color:var(--caramelo-claro)}
+  header a{color:inherit;text-decoration:none}
+
+  /* hero */
+  .hero{padding:120px 0 90px;overflow:hidden}
+  .hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+  .hero .kicker{color:var(--caramelo-claro);margin-bottom:22px}
+  .hero h1{font-size:clamp(46px,8vw,84px);line-height:.98;margin-bottom:24px}
+  .hero h1 em{display:block}
+  .hero p{font-size:22px;opacity:.9;max-width:520px;margin-bottom:34px}
+  .hero small{display:block;margin-top:16px;font-family:var(--sans);font-size:13px;opacity:.65}
+  .livro{position:relative;justify-self:center;max-width:340px;transform:perspective(1400px) rotateY(-14deg) rotateX(3deg);box-shadow:-22px 30px 60px rgba(0,0,0,.45),0 0 0 1px rgba(226,184,147,.18)}
+  .livro::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.35) 0,rgba(255,255,255,.08) 3%,transparent 7%)}
+
+  /* identificação */
+  .ident .lista{list-style:none;max-width:720px}
+  .ident li{font-size:23px;padding:16px 0 16px 36px;border-bottom:1px solid var(--linha);position:relative}
+  .ident li::before{content:"";position:absolute;left:0;top:32px;width:18px;height:1.5px;background:var(--caramelo)}
+  .ident .fecho{font-size:clamp(28px,4.5vw,38px);font-style:italic;color:var(--caramelo);margin-top:40px;border-left:2px solid var(--caramelo);padding-left:22px;max-width:720px;line-height:1.2}
+
+  /* método */
+  .fases{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px}
+  .fase{background:var(--cafe-2);border:1px solid rgba(226,184,147,.16);padding:30px 24px}
+  .fase .n{font-size:54px;font-style:italic;color:var(--caramelo-claro);line-height:1}
+  .fase h3{font-size:30px;margin:14px 0 8px}
+  .fase p{font-size:18px;opacity:.85;line-height:1.4}
+  .fase .ref{display:block;margin-top:14px;color:var(--caramelo-claro);font-size:10px}
+  .escuro .sub{font-size:21px;opacity:.88;max-width:620px}
+
+  /* recebe */
+  .recebe .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:center}
+  .recebe ul{list-style:none}
+  .recebe li{display:grid;grid-template-columns:44px 1fr;padding:16px 0;border-bottom:1px solid var(--linha);font-size:20px}
+  .recebe li span{font-style:italic;color:var(--caramelo);font-size:26px;line-height:1.1}
+  .recebe li b{display:block;font-size:22px}
+  .paginas{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .paginas img{box-shadow:0 14px 34px rgba(59,42,32,.18)}
+
+  /* citação */
+  .citacao{padding:90px 0;text-align:center}
+  .citacao blockquote{font-size:clamp(34px,6vw,58px);line-height:1.1;font-weight:500;max-width:860px;margin:0 auto}
+  .citacao .traco{margin:34px auto 0}
+
+  /* sobre */
+  .sobre .wrap{display:grid;grid-template-columns:.75fr 1.25fr;gap:56px;align-items:center}
+  .foto{aspect-ratio:4/5;background:var(--cafe) var(--noise);display:flex;align-items:center;justify-content:center;color:var(--caramelo-claro);font-size:96px;font-style:italic;overflow:hidden}
+  .foto img{width:100%;height:100%;object-fit:cover}
+  .sobre p{margin-bottom:16px;font-size:21px}
+  .nums{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px;border-top:1px solid var(--linha);padding-top:24px}
+  .nums b{display:block;font-size:40px;line-height:1;color:var(--caramelo)}
+  .nums span{font-family:var(--sans);font-size:12px;line-height:1.4;display:block;margin-top:8px;color:#6b5a4e}
+
+  /* form */
+  .form .wrap{max-width:640px;text-align:center}
+  .form .traco{margin:0 auto 18px}
+  .form p.sub{margin:0 auto 34px}
+  form{display:grid;gap:14px;text-align:left}
+  label{font-family:var(--sans);font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--caramelo-claro);display:block;margin-bottom:6px}
+  input{width:100%;font-family:var(--sans);font-size:17px;padding:17px 18px;background:rgba(252,251,249,.06);border:1px solid rgba(226,184,147,.35);color:var(--branco);border-radius:2px;outline:none}
+  input::placeholder{color:rgba(252,251,249,.4)}
+  input:focus{border-color:var(--caramelo-claro);background:rgba(252,251,249,.1)}
+  form .btn{width:100%;margin-top:8px;font-size:14px}
+  .aviso{font-family:var(--sans);font-size:12px;opacity:.6;text-align:center;line-height:1.5}
+  .erro{font-family:var(--sans);font-size:13px;color:var(--caramelo-claro);text-align:center;min-height:18px}
+  .ok{display:none}
+  .ok h3{font-size:44px;margin-bottom:14px}
+  .ok p{font-size:21px;opacity:.9;margin-bottom:28px}
+  .ok .ig{display:block;margin-top:22px;color:var(--caramelo-claro);font-family:var(--sans);font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+
+  /* faq */
+  .faq .wrap{max-width:780px}
+  details{border-bottom:1px solid var(--linha);padding:22px 0}
+  summary{font-size:24px;font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:20px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";color:var(--caramelo);font-weight:500}
+  details[open] summary::after{content:"−"}
+  details p{margin-top:12px;font-size:20px;color:#4a3a30}
+
+  footer{padding:46px 0;text-align:center;font-family:var(--sans);font-size:13px;line-height:1.7}
+  footer .cvv{color:var(--caramelo-claro);margin-bottom:10px}
+  footer a{color:var(--caramelo-claro)}
+  footer small{opacity:.55;display:block;margin-top:8px}
+
+  /* barra fixa mobile */
+  .fixo{display:none}
+
+  @media (max-width:860px){
+    body{font-size:18px}
+    section{padding:64px 0}
+    .hero{padding:96px 0 64px}
+    .hero .wrap,.recebe .wrap,.sobre .wrap{grid-template-columns:1fr;gap:40px}
+    .livro{max-width:170px;order:-1;transform:perspective(1200px) rotateY(-10deg)}
+    .hero p{font-size:20px}
+    .btn{width:100%}
+    .fases{grid-template-columns:1fr 1fr}
+    .ident li{font-size:20px}
+    .foto{max-width:320px}
+    .nums b{font-size:32px}
+    .fixo{display:block;position:fixed;left:0;right:0;bottom:0;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:var(--cafe);z-index:5;transform:translateY(110%);transition:transform .25s}
+    .fixo.on{transform:none}
+    .fixo .btn{background:var(--caramelo-claro);color:var(--cafe);padding:16px}
+  }
+  @media (max-width:480px){.fases{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header><div class="wrap sans"><span>Phillipe</span><a href="https://instagram.com/ophillipee" target="_blank" rel="noopener">@ophillipee</a></div></header>
+
+<!-- HERO -->
+<section class="hero escuro">
+  <div class="wrap">
+    <div>
+      <div class="sans kicker">E-book gratuito</div>
+      <h1>Terminou e sente que <em>perdeu o chão?</em></h1>
+      <p><b>Depois do Fim</b> é o método de 4 fases pra atravessar o término com Deus, curar o coração e voltar a se escolher. Direto, sem firula, com a Palavra em cada passo.</p>
+      <a href="#baixar" class="btn">Quero o e-book grátis</a>
+      <small>PDF de 17 páginas · leitura no celular · 100% gratuito</small>
+    </div>
+    <img class="livro" src="capa.png" alt="Capa do e-book Depois do Fim, de Phillipe" width="340" height="483">
+  </div>
+</section>
+
+<!-- IDENTIFICAÇÃO -->
+<section class="ident">
+  <div class="wrap">
+    <div class="traco"></div>
+    <h2>Esse e-book é pra você <em>se…</em></h2>
+    <ul class="lista">
+      <li>Relê a conversa antiga toda noite, procurando onde errou.</li>
+      <li>Olha o story da pessoa mesmo sabendo que vai doer.</li>
+      <li>Perdeu a vontade de fazer até o que sempre gostou.</li>
+      <li>Sente que não é suficiente pra ninguém.</li>
+      <li>Passa o dia bem e, à noite, desmorona.</li>
+    </ul>
+    <p class="fecho">Você não está quebrado. Está em reforma. E o Construtor é bom.</p>
+  </div>
+</section>
+
+<!-- MÉTODO -->
+<section class="escuro">
+  <div class="wrap">
+    <div class="traco"></div>
+    <h2>O método <em>Depois do Fim.</em></h2>
+    <p class="sub">Ninguém atravessa um término de uma vez. E ninguém precisa atravessar sozinho. Uma fase de cada vez, com Deus em todas.</p>
+    <div class="fases">
+      <div class="fase"><div class="n">01</div><h3>Aceitar</h3><p>Parar de brigar com o que já aconteceu e entregar a dor a Deus.</p><span class="sans ref">Eclesiastes 3</span></div>
+      <div class="fase"><div class="n">02</div><h3>Cortar</h3><p>Guardar o coração. Fechar as portas e saber o que responder se a pessoa voltar.</p><span class="sans ref">Provérbios 4:23</span></div>
+      <div class="fase"><div class="n">03</div><h3>Reconstruir</h3><p>Renovar as forças: oração, corpo, rotina e igreja.</p><span class="sans ref">Isaías 40:31</span></div>
+      <div class="fase"><div class="n">04</div><h3>Recomeçar</h3><p>Viver o novo que Deus está fazendo, com padrões novos.</p><span class="sans ref">Isaías 43:19</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- O QUE RECEBE -->
+<section class="recebe">
+  <div class="wrap">
+    <div class="paginas">
+      <img src="pagina-1.png" alt="Página do e-book: Doeu. E tudo bem doer." loading="lazy">
+      <img src="pagina-2.png" alt="Página do e-book: Uma oração" loading="lazy">
+    </div>
+    <div>
+      <div class="traco"></div>
+      <h2>O que tem <em>dentro.</em></h2>
+      <ul>
+        <li><span>01</span><div><b>As 4 fases, explicadas</b>Sem teoria difícil. O que fazer em cada uma.</div></li>
+        <li><span>02</span><div><b>Respostas prontas</b>Pra quando a pessoa some e volta como se nada tivesse acontecido.</div></li>
+        <li><span>03</span><div><b>A rotina mínima</b>O que fazer nos dias em que você não tem vontade de nada.</div></li>
+        <li><span>04</span><div><b>Plano dos primeiros 7 dias</b>Um passo por dia, pra começar hoje.</div></li>
+        <li><span>05</span><div><b>Versículos e uma oração</b>Uma Palavra pra cada fase e uma oração pra quando a saudade apertar.</div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CITAÇÃO -->
+<section class="citacao escuro">
+  <div class="wrap">
+    <blockquote>“Perto está o Senhor dos que têm o <em>coração quebrantado.</em>”</blockquote>
+    <p class="sans" style="color:var(--caramelo-claro);margin-top:22px">Salmos 34:18</p>
+    <div class="traco"></div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section class="sobre">
+  <div class="wrap">
+    <div class="foto"><img src="foto-phillipe.jpg" alt="Phillipe" onerror="this.remove();this.parentNode&&(this.parentNode.textContent='P')"></div>
+    <div>
+      <div class="traco"></div>
+      <h2>Quem <em>escreveu.</em></h2>
+      <p>Sou o Phillipe. Ironman, cristão, e falo sobre relacionamento do jeito que um homem maduro enxerga: com verdade e sem joguinho.</p>
+      <p>Meus vídeos sobre relacionamento chegaram a milhões de pessoas. E os comentários que mais me marcaram foram os de quem estava atravessando um fim. Foi daí que nasceu esse material.</p>
+      <p><em>Aprendi no Ironman que ninguém atravessa nada de uma vez. E aprendi com Deus que ninguém precisa atravessar sozinho.</em></p>
+      <div class="nums">
+        <div><b>11,9 mi</b><span>visualizações em 30 dias</span></div>
+        <div><b>20 mil+</b><span>seguidores no Instagram</span></div>
+        <div><b>34</b><span>vídeos com mais de 100 mil views</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="form escuro" id="baixar">
+  <div class="wrap">
+    <div class="traco"></div>
+    <h2>Baixe agora. <em>É grátis.</em></h2>
+    <p class="sub">Preencha abaixo e o download começa na hora.</p>
+
+    <form id="lead" novalidate>
+      <div><label for="nome">Seu nome</label><input id="nome" name="nome" autocomplete="given-name" placeholder="Como você gosta de ser chamado" required></div>
+      <div><label for="whatsapp">WhatsApp</label><input id="whatsapp" name="whatsapp" type="tel" inputmode="numeric" autocomplete="tel" placeholder="(11) 91234-5678" required></div>
+      <div><label for="email">E-mail</label><input id="email" name="email" type="email" autocomplete="email" placeholder="seu@email.com" required></div>
+      <div class="erro" id="erro" role="alert"></div>
+      <button class="btn" type="submit" id="enviar">Quero meu e-book grátis</button>
+      <p class="aviso">Seus dados ficam só comigo. Sem spam. Você pode sair quando quiser.</p>
+    </form>
+
+    <div class="ok" id="ok">
+      <h3>Pronto, <span id="okNome"></span>.</h3>
+      <p>Seu e-book está aqui. Lê com calma, um passo de cada vez.</p>
+      <a class="btn" href="Depois-do-Fim-Phillipe.pdf" download id="baixarPdf">Baixar o e-book (PDF)</a>
+      <a class="ig" href="https://instagram.com/ophillipee" target="_blank" rel="noopener">Me acompanha no Instagram · @ophillipee</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="wrap">
+    <div class="traco"></div>
+    <h2>Perguntas <em>rápidas.</em></h2>
+    <details><summary>É gratuito mesmo?</summary><p>Sim. Sem pegadinha e sem cartão.</p></details>
+    <details><summary>Como eu recebo?</summary><p>O download libera na hora, aqui mesmo na página. É um PDF que você lê no celular.</p></details>
+    <details><summary>Serve pra homem e pra mulher?</summary><p>Serve pra qualquer pessoa que está atravessando um término. A dor não escolhe gênero.</p></details>
+    <details><summary>Fala de Deus?</summary><p>Fala muito. Cada fase tem versículos e o e-book termina com uma oração. É a fé que eu vivo, e não vou esconder.</p></details>
+    <details><summary>Terminei faz tempo e ainda dói. Serve pra mim?</summary><p>Serve. Cada fase tem o seu tempo. Tem gente que atravessa em semanas, tem gente que leva meses. Não é corrida.</p></details>
+  </div>
+</section>
+
+<footer class="escuro">
+  <div class="wrap">
+    <p class="cvv">Deus abençoe todos.</p>
+    <p>Phillipe · <a href="https://instagram.com/ophillipee" target="_blank" rel="noopener">@ophillipee</a></p>
+  </div>
+</footer>
+
+<div class="fixo" id="fixo"><a href="#baixar" class="btn">Quero o e-book grátis</a></div>
+
+<script>
+  const $ = id => document.getElementById(id);
+  const form = $("lead"), erro = $("erro"), zap = $("whatsapp");
+
+  zap.addEventListener("input", () => {
+    const d = zap.value.replace(/\D/g, "").slice(0, 11);
+    zap.value = d.length > 6 ? `(${d.slice(0,2)}) ${d.slice(2, d.length - 4)}-${d.slice(-4)}`
+              : d.length > 2 ? `(${d.slice(0,2)}) ${d.slice(2)}` : d;
+  });
+
+  form.addEventListener("submit", async e => {
+    e.preventDefault();
+    const nome = $("nome").value.trim(), email = $("email").value.trim(), whatsapp = zap.value.replace(/\D/g, "");
+    if (nome.length < 2) return erro.textContent = "Coloca seu nome.";
+    if (whatsapp.length < 10) return erro.textContent = "Confere o WhatsApp com DDD.";
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return erro.textContent = "Confere o e-mail.";
+    erro.textContent = "";
+    $("enviar").disabled = true; $("enviar").textContent = "Enviando…";
+
+    const utm = Object.fromEntries(new URLSearchParams(location.search));
+    if (FORM_ENDPOINT) {
+      try {
+        await fetch(FORM_ENDPOINT, { method: "POST", mode: "no-cors",
+          body: new URLSearchParams({ nome, email, whatsapp, origem: utm.utm_source || "", campanha: utm.utm_campaign || "", pagina: location.href }) });
+      } catch (_) { /* o download libera mesmo se a planilha falhar */ }
+    }
+    if (window.fbq) fbq("track", "Lead", { content_name: "Ebook Depois do Fim" });
+
+    form.style.display = "none";
+    $("okNome").textContent = nome.split(" ")[0];
+    $("ok").style.display = "block";
+    $("baixarPdf").href = PDF_URL;
+    $("baixar").scrollIntoView({ behavior: "smooth" });
+  });
+
+  // barra fixa no mobile: aparece depois do hero, some perto do formulário
+  const fixo = $("fixo"), hero = document.querySelector(".hero"), alvo = $("baixar");
+  const vis = { hero: true, form: false };
+  new IntersectionObserver(es => {
+    es.forEach(x => vis[x.target === hero ? "hero" : "form"] = x.isIntersecting);
+    fixo.classList.toggle("on", !vis.hero && !vis.form);
+  }).observe(hero);
+  new IntersectionObserver(es => {
+    es.forEach(x => vis.form = x.isIntersecting);
+    fixo.classList.toggle("on", !vis.hero && !vis.form);
+  }).observe(alvo);
+</script>
+</body>
+</html>
