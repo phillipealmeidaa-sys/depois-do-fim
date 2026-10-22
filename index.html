@@ -2,11 +2,11 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Está sem chão após o término? — E-book gratuito | Phillipe</title>
-<meta name="description" content="O método de 4 fases pra atravessar o término com Deus, curar o coração e voltar a se escolher. E-book gratuito do Phillipe (@ophillipee).">
+<meta name="description" content="Quatro fases para atravessar o fim de um relacionamento com Deus, um passo de cada vez. E-book gratuito do Phillipe (@ophillipee).">
 <meta property="og:title" content="Está sem chão após o término? — E-book gratuito">
-<meta property="og:description" content="O método de 4 fases pra atravessar o término com Deus, curar o coração e voltar a se escolher.">
+<meta property="og:description" content="Quatro fases para atravessar o fim de um relacionamento com Deus, um passo de cada vez.">
 <meta property="og:image" content="capa.png">
 <meta name="theme-color" content="#3B2A20">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,11 +33,12 @@
     --serif:"Cormorant Garamond",Georgia,serif; --sans:Inter,system-ui,sans-serif;
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%}
   body{background:var(--branco);color:var(--texto);font-family:var(--serif);font-variant-numeric:lining-nums;font-size:20px;line-height:1.5;-webkit-font-smoothing:antialiased}
-  img{max-width:100%;display:block}
+  img{max-width:100%;height:auto;display:block}
   em{font-style:italic;color:var(--caramelo)}
-  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 max(20px,env(safe-area-inset-right)) 0 max(20px,env(safe-area-inset-left))}
+  h1,h2,h3,p,li,summary{overflow-wrap:break-word}
   .sans{font-family:var(--sans);text-transform:uppercase;letter-spacing:.2em;font-weight:600;font-size:11px}
   .traco{width:48px;height:2px;background:var(--caramelo);margin-bottom:18px}
   h1,h2,h3{font-weight:600;line-height:1.05;letter-spacing:-.01em}
@@ -49,9 +50,9 @@
   .escuro .traco{background:var(--caramelo-claro)}
 
   .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--caramelo);color:var(--branco);text-decoration:none;font-family:var(--sans);font-weight:600;font-size:13px;letter-spacing:.16em;text-transform:uppercase;padding:20px 30px;border:0;border-radius:2px;cursor:pointer;transition:background .2s,transform .2s}
-  .btn:hover{background:#74492F;transform:translateY(-1px)}
+  @media (hover:hover){.btn:hover{background:#74492F;transform:translateY(-1px)}}
   .escuro .btn{background:var(--caramelo-claro);color:var(--cafe)}
-  .escuro .btn:hover{background:#ECC9A8}
+  @media (hover:hover){.escuro .btn:hover{background:#ECC9A8}}
 
   /* topo */
   header{position:absolute;top:0;left:0;right:0;padding:24px 0;z-index:2}
@@ -64,6 +65,7 @@
   .hero .kicker{color:var(--caramelo-claro);margin-bottom:22px}
   .hero h1{font-size:clamp(46px,8vw,84px);line-height:.98;margin-bottom:24px}
   .hero h1 em{display:block}
+  h1,h2{text-wrap:balance}
   .hero p{font-size:22px;opacity:.9;max-width:520px;margin-bottom:34px}
   .hero small{display:block;margin-top:16px;font-family:var(--sans);font-size:13px;opacity:.65}
   .livro{position:relative;justify-self:center;max-width:340px;height:auto;transform:perspective(1400px) rotateY(-14deg) rotateX(3deg);box-shadow:-22px 30px 60px rgba(0,0,0,.45),0 0 0 1px rgba(226,184,147,.18)}
@@ -161,6 +163,50 @@
     .fixo .btn{background:var(--caramelo-claro);color:var(--cafe);padding:16px}
   }
   @media (max-width:480px){.fases{grid-template-columns:1fr}}
+
+  /* notebooks e tablets na horizontal */
+  @media (min-width:861px) and (max-width:1100px){
+    .fases{grid-template-columns:1fr 1fr}
+    .hero .wrap,.recebe .wrap,.sobre .wrap{gap:36px}
+  }
+  /* tablets na vertical, dobráveis abertos e celulares grandes deitados */
+  @media (min-width:600px) and (max-width:860px){
+    .hero .wrap{grid-template-columns:1fr 200px;gap:28px}
+    .livro{order:0;max-width:200px}
+    .hero .btn{width:auto;padding:20px 34px}
+    .nums b{font-size:36px}
+  }
+  /* celular deitado */
+  @media (orientation:landscape) and (max-height:500px){
+    .hero{padding:58px 0 32px}
+    .hero .wrap{grid-template-columns:1fr 130px;gap:24px}
+    .livro{order:0;max-width:130px}
+    .hero h1{font-size:34px;margin-bottom:12px}
+    .hero .kicker{margin-bottom:10px}
+    .hero p{font-size:17px;margin-bottom:18px}
+    .hero small{margin-top:10px}
+    .hero .btn{width:auto}
+  }
+  /* celulares baixos (iPhone SE e similares) */
+  @media (max-width:599px) and (max-height:700px){
+    .hero{padding:72px 0 44px}
+    .hero .wrap{gap:20px}
+    .livro{max-width:96px}
+    .hero .kicker{margin-bottom:14px}
+    .hero h1{margin-bottom:16px}
+    .hero p{font-size:17px;margin-bottom:20px}
+  }
+  @media (max-width:599px) and (max-height:600px){.livro{display:none}}
+  /* telas bem estreitas (dobráveis fechados, celulares pequenos) */
+  @media (max-width:360px){
+    .wrap{padding:0 max(16px,env(safe-area-inset-right)) 0 max(16px,env(safe-area-inset-left))}
+    .hero h1{font-size:34px}
+    h2{font-size:30px}
+    .btn{letter-spacing:.1em;padding:18px 16px}
+    .nums{grid-template-columns:1fr 1fr}
+    summary{font-size:21px}
+  }
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 </style>
 </head>
 <body>
@@ -172,10 +218,10 @@
   <div class="wrap">
     <div>
       <div class="sans kicker">E-book gratuito</div>
-      <h1>Terminou e sente que <em>perdeu o chão?</em></h1>
-      <p><b>Está sem chão após o término?</b> é o e-book com o método de 4 fases pra atravessar o término com Deus, curar o coração e voltar a se escolher. Direto, sem firula, com a Palavra em cada passo.</p>
+      <h1>Terminou e sente&nbsp;que <em>perdeu o chão?</em></h1>
+      <p><b>Está sem chão após o término?</b> é um e-book gratuito com quatro fases para atravessar o fim de um relacionamento com Deus, um passo de cada vez. Com versículos, exercícios e um plano para os primeiros 7 dias.</p>
       <a href="#baixar" class="btn">Quero o e-book grátis</a>
-      <small>PDF de 21 páginas · leitura no celular · 100% gratuito</small>
+      <small>PDF de 27 páginas · leitura no celular · 100% gratuito</small>
     </div>
     <img class="livro" src="capa.png" alt="Capa do e-book Está sem chão após o término?, de Phillipe" width="340" height="483">
   </div>
@@ -223,11 +269,11 @@
       <div class="traco"></div>
       <h2>O que tem <em>dentro.</em></h2>
       <ul>
-        <li><span>01</span><div><b>As 4 fases, explicadas</b>Sem teoria difícil. O que fazer em cada uma.</div></li>
-        <li><span>02</span><div><b>Respostas prontas</b>Pra quando a pessoa some e volta como se nada tivesse acontecido.</div></li>
-        <li><span>03</span><div><b>A rotina mínima</b>O que fazer nos dias em que você não tem vontade de nada.</div></li>
-        <li><span>04</span><div><b>Plano dos primeiros 7 dias</b>Um passo por dia, pra começar hoje.</div></li>
-        <li><span>05</span><div><b>Versículos e uma oração</b>Uma Palavra pra cada fase e uma oração pra quando a saudade apertar.</div></li>
+        <li><span>01</span><div><b>As 4 fases, explicadas</b>Aceitar, cortar, reconstruir e recomeçar, uma de cada vez.</div></li>
+        <li><span>02</span><div><b>Saudade, limites e se a pessoa voltar</b>Como agir sem se humilhar e sem vingança, com respostas prontas.</div></li>
+        <li><span>03</span><div><b>Para cada tipo de término</b>Orientações para quem tem filhos em comum ou saiu de uma relação que machucou.</div></li>
+        <li><span>04</span><div><b>Exercícios e plano de 7 dias</b>Uma pergunta por fase e um passo por dia, para começar hoje.</div></li>
+        <li><span>05</span><div><b>Versículos e uma oração</b>Uma Palavra para cada fase e uma oração para quando a saudade apertar.</div></li>
       </ul>
     </div>
   </div>
